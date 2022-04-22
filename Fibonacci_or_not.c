@@ -2,7 +2,7 @@
 #include<math.h>
 int main()
 {
-    int n,i,a=0,b=1,c,r;
+    int n,a=0,b=1,i,c;
     scanf("%d",&n);
     c=a+b;
     while(c<n)
@@ -19,5 +19,5 @@ int main()
     {
         printf("False");
     }
-    return 0;
+    
 }

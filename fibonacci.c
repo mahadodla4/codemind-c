@@ -1,9 +1,10 @@
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-    int i,n,a=0,b=1,c;
+    int n,a=0,b=1,i,c;
     scanf("%d",&n);
-    printf("%d %d ",a,b);
+    printf("0 1 ");
     for(i=2; i<n; i++)
     {
         c=a+b;
@@ -11,6 +12,5 @@ int main()
         a=b;
         b=c;
     }
-    return 0;
     
 }

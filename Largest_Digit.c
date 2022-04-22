@@ -1,11 +1,12 @@
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-    int i=1,n,r,ld=0;
+    int n,ld=0,r;
     scanf("%d",&n);
     while(n>0)
     {
-    r=n%10;
+        r=n%10;
     if(ld<r)
     {
         ld=r;
@@ -13,5 +14,5 @@ int main()
     n=n/10;
     }
     printf("%d",ld);
-    return 0;
+    
 }

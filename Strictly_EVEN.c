@@ -3,22 +3,25 @@ int main()
 {
     int n;
     scanf("%d",&n);
-    int arr[n],i,count=0;
+    int arr[n],i,count=0,flag=0;
     for(i=0; i<n; i++)
     {
         scanf("%d",&arr[i]);
     }
-    for(i=1;i<n; i+=2)//i=i+2
+    for(i=0;  i<n; i++)
     {
-        if(arr[i]%2==0)
+        if(arr[i]%2==0 && i%2!=0)
         {
-            count++;
-            printf("False");
+            flag=1;
         }
     }
-    if(count==0)
+    if(flag==1)
+    {
+        printf("False");
+    }
+    else
     {
         printf("True");
     }
-    return 0;
+ 
 }

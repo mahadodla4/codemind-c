@@ -10,5 +10,4 @@ int main()
         sum=sum*10+r;
     }
     printf("%d",sum);
-    return 0;
 }

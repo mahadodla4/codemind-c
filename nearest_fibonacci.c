@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,c,a=1,b=1,f1,f2;
+    int a=1,b=1,c,n;
     scanf("%d",&n);
     c=1;
     while(c<=n)
@@ -12,15 +12,14 @@ int main()
     }
     if(n-a<c-n)
     {
-    	  printf("%d",a);
+        printf("%d",a);
     }
     else if(n-a==c-n)
     {
-    	  printf("%d %d",a,c);
+        printf("%d %d",a,c);
     }
     else
     {
-    	   printf("%d",c);
+        printf("%d",c);
     }
-    
 }

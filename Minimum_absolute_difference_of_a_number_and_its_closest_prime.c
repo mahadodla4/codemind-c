@@ -1,5 +1,4 @@
-#include<iostream>
-#include<math.h>
+#include<bits/stdc++.h>
 using namespace std;
 int prime(int p)
 {
@@ -17,22 +16,28 @@ int prime(int p)
     }
     return 1;
 }
-int min(int c,int d)
+int min(int q,int r)
 {
-    if(c<d)
+    if(q<r)
     {
-        return c;
+        return q;
     }
     else
     {
-        return d;
+        return r;
     }
 }
 int main()
 {
-    int i,a,c=0,af,bf,ss,A,B;
-    cin>>a;
-    for(i=a; i>0; i--)
+    int n,i,af,bf,nxt,A,B;
+    cin>>n;
+    if(prime(n))
+    {
+        cout<<"0"<<endl;
+    }
+    else
+    {
+        for(i=n-1; i>0; i--)
         {
             if(prime(i))
             {
@@ -40,17 +45,18 @@ int main()
                 break;
             }
         }
-        ss=a+1;
-        while(1)
+        nxt=n+1;
+        while(nxt)
         {
-            if(prime(ss))
+            if(prime(nxt))
             {
-                af=ss;
+                af=nxt;
                 break;
             }
-            ss++;
+            nxt++;
         }
-    A=af-a;
-    B=a-bf;
-    cout<<min(A,B)<<endl;
+        A=af-n;
+        B=n-bf;
+        cout<<min(A,B)<<endl;
+    }
 }

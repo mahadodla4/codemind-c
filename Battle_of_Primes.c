@@ -1,36 +1,38 @@
-#include<stdio.h>
-int prime(int n)
+#include<bits/stdc++.h>
+using namespace std;
+int prime(int p)
 {
-    int i,c=0;
-    for(i=1;i<n;i++)
+    int i;
+    if(p==1)
     {
-        if(n%i==0)
-        {
-            c++;
-        }
-        if(c>1)
         return 0;
+    }
+    for(i=2; i<=sqrt(p); i++)
+    {
+        if(p%i==0)
+        {
+            return 0;
+        }
     }
     return 1;
 }
 int main()
 {
-    int s1,s2;
-    scanf("%d%d",&s1,&s2);
-    int add;
-    add=s1+s2;
-    int i,x;
-    for(i=1;;i++)
+    int a,b,c=1,d;
+    cin>>a;
+    cin>>b;
+    while(1)
     {
-        x=add+i;
-        if(prime(x)==1)
+        if(c>=1)
         {
-            printf("%d",i);
-            break ;
+            d=a+b+c;
+            if(prime(d))
+            {
+                cout<<c;
+                break;
+            }
         }
-        x=0;
+        c++;
     }
     
-    
-    return 0;
 }

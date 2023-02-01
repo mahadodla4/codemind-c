@@ -1,5 +1,4 @@
-#include<iostream>
-#include<math.h>
+#include<bits/stdc++.h>
 using namespace std;
 int prime(int p)
 {
@@ -38,24 +37,21 @@ int pal(int q)
 }
 int main()
 {
-    int n,i;
+    int n,i,af;
     cin>>n;
-    if(n>=10 and n<=10000)
+    i=n+1;
+    while(i)
     {
-        for(i=n+1; i>=0; i++)
+        if(prime(i))
         {
-            if(prime(i))
+            if(pal(i))
             {
-                if(pal(i))
-                {
-                    cout<<i;
-                    break;
-                }
+                af=i;
+                break;
             }
         }
+        i++;
     }
-    else
-    {
-        cout<<"-1";
-    }
+    cout<<af<<endl;
+    
 }
